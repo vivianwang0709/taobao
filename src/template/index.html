@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html style="overflow: hidden;">
+
+<head>
+    <meta charset="utf-8" />
+    <script>!function (N, M) { function L() { var a = I.getBoundingClientRect().width; a / F > 540 && (a = 540 * F); var d = a / 10; I.style.fontSize = d + "px", D.rem = N.rem = d } var K, J = N.document, I = J.documentElement, H = J.querySelector('meta[name="viewport"]'), G = J.querySelector('meta[name="flexible"]'), F = 0, E = 0, D = M.flexible || (M.flexible = {}); if (H) { console.warn("将根据已有的meta标签来设置缩放比例"); var C = H.getAttribute("content").match(/initial\-scale=([\d\.]+)/); C && (E = parseFloat(C[1]), F = parseInt(1 / E)) } else { if (G) { var B = G.getAttribute("content"); if (B) { var A = B.match(/initial\-dpr=([\d\.]+)/), z = B.match(/maximum\-dpr=([\d\.]+)/); A && (F = parseFloat(A[1]), E = parseFloat((1 / F).toFixed(2))), z && (F = parseFloat(z[1]), E = parseFloat((1 / F).toFixed(2))) } } } if (!F && !E) { var y = N.navigator.userAgent, x = (!!y.match(/android/gi), !!y.match(/iphone/gi)), w = x && !!y.match(/OS 9_3/), v = N.devicePixelRatio; F = x && !w ? v >= 3 && (!F || F >= 3) ? 3 : v >= 2 && (!F || F >= 2) ? 2 : 1 : 1, E = 1 / F } if (I.setAttribute("data-dpr", F), !H) { if (H = J.createElement("meta"), H.setAttribute("name", "viewport"), H.setAttribute("content", "initial-scale=" + E + ", maximum-scale=" + E + ", minimum-scale=" + E + ", user-scalable=no"), I.firstElementChild) { I.firstElementChild.appendChild(H) } else { var u = J.createElement("div"); u.appendChild(H), J.write(u.innerHTML) } } N.addEventListener("resize", function () { clearTimeout(K), K = setTimeout(L, 300) }, !1), N.addEventListener("pageshow", function (b) { b.persisted && (clearTimeout(K), K = setTimeout(L, 300)) }, !1), "complete" === J.readyState ? J.body.style.fontSize = 12 * F + "px" : J.addEventListener("DOMContentLoaded", function () { J.body.style.fontSize = 12 * F + "px" }, !1), L(), D.dpr = N.dpr = F, D.refreshRem = L, D.rem2px = function (d) { var c = parseFloat(d) * this.rem; return "string" == typeof d && d.match(/rem$/) && (c += "px"), c }, D.px2rem = function (d) { var c = parseFloat(d) / this.rem; return "string" == typeof d && d.match(/px$/) && (c += "rem"), c } }(window, window.lib || (window.lib = {}));</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>taobao mobile</title>
+    <link href="../../dist/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="view" name="index">
+        <div class="top-fixed">
+            <header>
+                <div class="header-wrap">
+                    <div id="search-placeholder">
+                        <span class="glyphicon">尋找寶貝店舖</span>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="scroll-wrap">
+            <div class="scroll-content">
+                <div id="content">
+                    <section>
+                        <div data-template-name="tbanner">
+                            <div layer="1">
+                                <div layer="2-1">
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div layer="2-2">
+                                    <a><img src="https://gw.alicdn.com/imgextra/TB2EeCGb9CWBuNjy0FhXXb6EVXa_!!165-0-lubanu.jpg_q50.jpg"></img></a>
+                                    <a><img src="https://gw.alicdn.com/imgextra/TB2Z0c3b4WYBuNjy1zkXXXGGpXa_!!170-0-lubanu.jpg_q50.jpg"></img></a>
+                                    <a><img src="https://aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg"></img></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-template-name="tcategroy">
+                            <div layer="1">
+                                <div layer="2-1">
+                                    <div layer="3-1">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">天貓</div>
+                                    </div>
+                                    <div layer="3-2">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">巨划算</div>
+                                    </div>
+                                    <div layer="3-3">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">天貓國際</div>
+                                    </div>
+                                    <div layer="3-4">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">外賣</div>
+                                    </div>
+                                    <div layer="3-5">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">天貓超市</div>
+                                    </div>
+                                </div>
+                                <div layer="2-2">
+                                    <div layer="3-1">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">天貓</div>
+                                    </div>
+                                    <div layer="3-2">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">巨划算</div>
+                                    </div>
+                                    <div layer="3-3">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">天貓國際</div>
+                                    </div>
+                                    <div layer="3-4">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">外賣</div>
+                                    </div>
+                                    <div layer="3-5">
+                                        <div layer="4-1"></div>
+                                        <div layer="4-2">天貓超市</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-template-name="tnews">
+                            <div layer="1">
+                                <div layer="2-1"></div>
+                                <div layer="2-2">
+                                    <div layer="3-1">
+                                        <span></span>
+                                        <span>美搭</span>
+                                        <span>不要總穿黑色！這四個顏色顯白還顯瘦！</span>
+                                    </div>
+                                    <div layer="3-2">
+                                        <span></span>
+                                        <span>手機</span>
+                                        <span>不要總穿黑色！這四個顏色顯白還顯瘦！</span>
+                                    </div>
+                                    <div layer="3-3">
+                                        <span></span>
+                                        <span>熱文</span>
+                                        <span>剝瓜子不用手，1個瓶蓋做個它，剝皮太快</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-template-name="thot">
+                            <div layer="1">
+                                <div layer="2-1"></div>
+                                <div layer="2-2">
+                                    <div data-type="backimg" layer="3-1">
+                                        <div layer="4">
+                                            <div layer="5">
+                                               <span role="h">00</span>
+                                               <span class="dot"></span>
+                                               <span role="m">00</span>
+                                               <span class="dot"></span>
+                                               <span role="s">00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div layer="3-2"></div>
+                                    <div layer="3-3">
+                                        <div layer="4-1">
+                                            <div data-type="backimg" layer="5-1"></div>
+                                            <div data-type="backimg" layer="5-2"></div>
+                                        </div>
+                                        <div layer="4-2"></div>
+                                        <div layer="4-3">
+                                            <div data-type="backimg" layer="5-1"></div>
+                                            <div layer="5-2"></div>
+                                            <div data-type="backimg" layer="5-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-template-name="tguess">
+                            <div layer="1">
+                                <div layer="2-1">猜你喜歡</div>
+                                <div layer="2-2">實時推薦最適合你的寶貝</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="guessitem">
+                    <section>
+                        <div data-template-name="single-item">
+                            <div layer="1">
+                                <div layer="2-1">
+                                    <div data-type="backimg" layer="3-1"></div>
+                                    <div layer="3-2">[为你推荐]zimu.木 带拉链单肩斜跨女包简约牛仔帆布购物袋休闲环保袋</div>
+                                    <div layer="3-3">
+                                        <span class="glyphicon">19</span>
+                                    </div>
+                                </div>
+                                <div layer="2-2">
+                                    <div data-type="backimg" layer="3-1"></div>
+                                    <div layer="3-2">[为你推荐]zimu.木 带拉链单肩斜跨女包简约牛仔帆布购物袋休闲环保袋</div>
+                                    <div layer="3-3">
+                                        <span class="glyphicon">19</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-template-name="single-item">
+                            <div layer="1">
+                                <div layer="2-1">
+                                    <div data-type="backimg" layer="3-1"></div>
+                                    <div layer="3-2">[为你推荐]zimu.木 带拉链单肩斜跨女包简约牛仔帆布购物袋休闲环保袋</div>
+                                    <div layer="3-3">
+                                        <span class="glyphicon">19</span>
+                                    </div>
+                                </div>
+                                <div layer="2-2">
+                                    <div data-type="backimg" layer="3-1"></div>
+                                    <div layer="3-2">[为你推荐]zimu.木 带拉链单肩斜跨女包简约牛仔帆布购物袋休闲环保袋</div>
+                                    <div layer="3-3">
+                                        <span class="glyphicon">19</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-fixed">
+            <footer>
+                <a class="home">
+                    <span class="glyphicon"></span>
+                    <p>首頁</p>
+                </a>
+                <a class="delivery">
+                    <span class="glyphicon"></span>
+                    <p>物流</p>
+                </a>
+                <a class="cart">
+                    <span class="glyphicon"></span>
+                    <p>購物車</p>
+                </a>
+                <a class="my">
+                    <span class="glyphicon"></span>
+                    <p>我的淘寶</p>
+                </a>
+                <a class="more">
+                    <span class="glyphicon"></span>
+                    <p>更多</p>
+                </a>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="../../dist/bundle.js"></script>
+</html>

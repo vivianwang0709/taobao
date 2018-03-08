@@ -1,0 +1,334 @@
+body > .view[name="index"] .scroll-content{
+
+    overflow: scroll;
+    //.px2px1(height,1024);
+
+    section{
+        background-color: white;          
+    }
+
+    #content{
+        position: relative;
+        width: 10rem;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    #guessitem{
+        position: relative;
+        width: 10rem;
+        margin: 0 auto;       
+    }
+
+}
+
+
+body > .view[name="index"] section [data-template-name="tbanner"]{
+    [layer="1"]{
+        position: relative;
+        width: 10rem;
+        height: 3.125rem;
+    }
+
+    [layer="2-1"]{
+        position: absolute;
+        display: flex;
+        flex-flow: row;
+        right: .1rem;
+        bottom: .3rem;
+        z-index: 1;
+
+        .active{
+            background-position-y: .25rem;
+        }
+        span{
+            display: block;
+            margin: 0 .09375rem;
+            overflow: hidden;
+            width: .25rem;
+            height: .25rem;
+            background-size: 0.25rem 0.5rem;
+            background-position: .25rem .5rem;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAgCAYAAAAbifjMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsZJREFUeNqkVE1oE1EQnrdJ2liaQyKNDRVBLU3SYhpSDRqVij2Ip4InqVisWOlBhBSVKOrBXgpKoRCaSw6KJxG8F2xJQSvtpfFifxI9KGnTGJrDWk0226wzy25MYlt368DwYHa+771975uPSZIElcEYM+FixbRg1inlAiaPmcN+sbKfqwEf8Pv97VNTU125XO40Np+lzGazgcnJyeMul8uNPfYqjHoC/NAciURcg4ODRw0YsE0Ui8WtcDi8Mjw8nEBcmmpGBWyfmJhwDg0NtcEuYTKZDMFg0C0IgoSYEpJkGNUDgUBHLBbrogbQEHQSj8czv7S0tEh3YB0ZGXFoBasnGR8fP0hYIrD4fL4m0Bler9eGSyMRmCwWS71eAqvVSpg6DvYeTNVBkef5gl406iSPi0AE/MLCQlYvQTwe38DlB928kEgk9vX39zejfjitz9jb27uICv3GoRiKs7Ozq9FoNKl197GxsWXUwDrNhaxEWVGMcaIoAqqxdSdN4M4igldCoVCSMKCAy4lhx2HqxMG5mE6n+7B2kzKVSl2mGg7TMeqpxLBtxtmojHMjplkp/8Lc/Oc4V7wvq/m24+Uaa/3gxmFoe9jOrjab4UI9B4eont+Cz6t5eHv3o/Qce76U/7/WD+Z62PUTNnjE/hy9KkoS/HyXhQfdMemV6gcyAfnBh/Ns4OR+GNXyjNMZuN0zI5NkOPLAW63Q7rfBY606ONcEo5da4AhduOwHd5ysj2PQoJWAep92smtlP6AL0zsLDjN0l/0Ah9qhlwBfqOV//cBQ9gOhBGt60YUSfC37QRpFopdgLQ8z5AdEkHu2LL0kkWgFUy+pkrCyH4ST8Gl+A55oJYh9h9CbFJCkRU71g1PT0ov3Wbi320nwG6+o8LU6D1XjTJLGYXLed7MrqI0zDQbooPqmCPH1AszRsZWd/x6mvfrBbwEGAEsWX34YFVnkAAAAAElFTkSuQmCC");
+        }
+    }
+
+    [layer="2-2"]{
+        display: flex;
+        flex-flow: row;
+        height: 3.125rem;
+        transition: all .35s ease-in-out;
+        transform: translateX(0%);
+        a{
+            width: 10rem;
+        }
+        img{
+            width: 10rem;
+            height: 100%;
+            //content: url("https://gw.alicdn.com/imgextra/TB2EeCGb9CWBuNjy0FhXXb6EVXa_!!165-0-lubanu.jpg_q50.jpg");
+        }
+    }
+}
+
+body > .view[name="index"] section [data-template-name="tcategroy"] {
+    
+    width: 100%;
+
+    [layer="1"]{
+        display: flex;
+        flex-flow: column;
+    }
+
+    [layer^="2-"]{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    [layer="2-1"]{
+        margin-top: 0.313rem;
+        @imgs:
+        "https://gw.alicdn.com/tps/TB1FDOHLVXXXXcZXFXXXXXXXXXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/i2/TB19BluIVXXXXX6XpXXN4ls0XXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/TB1PlmNLVXXXXXEXFXXXXXXXXXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/TB1RN0HMFXXXXXNXpXXXXXXXXXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/TB1exaOLVXXXXXeXFXXXXXXXXXX-183-129.png?imgtag=avatar";
+
+        .loop-tcategroy(5,@imgs);
+    }
+
+    [layer="2-2"]{
+        @imgs:
+        "https://gw.alicdn.com/tps/TB1FDOHLVXXXXcZXFXXXXXXXXXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/i2/TB19BluIVXXXXX6XpXXN4ls0XXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/TB1PlmNLVXXXXXEXFXXXXXXXXXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/TB1RN0HMFXXXXXNXpXXXXXXXXXX-183-129.png?imgtag=avatar",
+        "https://gw.alicdn.com/tps/TB1exaOLVXXXXXeXFXXXXXXXXXX-183-129.png?imgtag=avatar";
+
+        .loop-tcategroy(5,@imgs);
+    }    
+
+    [layer^="3-"]{
+        width: 1.813rem;
+        height: 2.125rem;
+    }
+
+    [layer="4-1"]{
+        width: 1.625rem;
+        height: 1.141rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    [layer="4-2"]{
+        box-sizing: border-box;
+        width: 1.625rem;
+        height: 0.688rem;
+        line-height: 0.688rem;
+        text-align: center;
+        color: rgb(102, 102, 102);
+        background-color: transparent;
+    }
+
+}
+
+body > .view[name="index"] section [data-template-name="tnews"]{
+    width: 100%;
+    overflow: hidden;
+
+    [layer="1"]{
+        height: 0.953rem;
+    }
+
+    [layer="2-1"]{
+        height: 1px;
+        background-color: rgb(232, 232, 232);
+    }
+
+    [layer="2-2"]{
+        height: 0.938rem;
+        transform: translateY(0%);
+    }
+
+    [layer^="3-"]{
+        display: flex;
+        flex-flow: row;
+        padding: 0.09375rem 0px;
+        height: 0.75rem;    
+    }
+
+    [layer^="3-"]{
+        >span:first-child{
+            width: 2.1875rem;
+            height: 100%;
+            border-right: 1px solid rgb(232, 232, 232);
+            background: url("https://gw.alicdn.com/tps/i3/TB12wM3HXXXXXbxapXXdFmWHFXX-207-60.png?imgtag=avatar") center center / 1.61719rem 0.46875rem no-repeat;
+        }
+        >span:nth-child(2){
+            display: block;
+            overflow: hidden;
+            margin: 0.125rem 0.15625rem 0.125rem 0.28125rem;
+            padding: 0px 0.0625rem;
+            height: 0.46875rem;
+            max-width: 2rem;
+            line-height: 0.46875rem;
+            text-align: center;
+            border: 1px solid rgb(216, 20, 33);
+            border-radius: 0.125rem;
+            .px2px1(font-size, 14);
+            color: rgb(216, 20, 33);
+        }
+        >span:nth-child(3){
+            display: block;
+            overflow: hidden;
+            margin: 0.125rem 0px;
+            height: 0.5rem;
+            width: 6rem;
+            line-height: 0.5rem;
+            color: rgb(53, 53, 53);
+            .px2px1(font-size,15.2344);
+        }
+    }
+  
+}
+
+body > .view[name="index"] section [data-template-name="thot"]{
+    
+    [layer="2-1"]{
+        height: 0.156rem;
+        background-color: rgb(238, 238, 238);
+    }
+    [layer="2-2"]{
+        display: flex;
+        height: 5.047rem;
+    }
+    [layer="3-1"]{
+        width: 3.828rem;
+        height: 5.047rem;
+        background-image: url("../images/thot-1.jpg");
+
+        [layer="4"]{
+            margin-top: 1.4rem;
+            margin-left: 0.172rem;
+            width: 2.781rem;
+            height: 0.5rem;
+        }
+        span{
+            display: inline-block;
+            font-size: 0.3rem;
+        }
+        span[role]{
+            background-color: #000000d6;
+            padding: .1rem;
+            color: white;
+        }
+        .dot{
+            width: 0.2rem;
+        }
+    }
+    [layer="3-2"]{
+        width: 1px;
+        background-color: rgb(238, 238, 238);
+    }
+
+    [layer="3-3"]{
+        width: 6.17rem;
+        overflow: hidden;
+    }
+
+    [layer="4-1"]{
+        display: flex;
+        flex-flow: row;
+
+        [layer="5-1"]{
+            width: 3.17rem;
+            height: 2.313rem;
+            background-image: url("https://img.alicdn.com/tps/TB19RaGLpXXXXcDXpXXXXXXXXXX-333-261.jpg_q50.jpg?imgtag=avatar")
+        }
+        
+        [layer="5-2"]{
+            width: 3rem;
+            height: 2.313rem;
+            background-image: url("https://img.alicdn.com/imgextra/i1/12/TB2OnbdaiGO.eBjSZFPXXcKCXXa_!!2-subaru.png")
+        }
+    }
+
+    [layer="4-2"]{
+        height: 1px;
+        background-color: rgb(238, 238, 238);        
+    }
+
+    [layer="4-3"]{
+        display: flex;
+        flex-flow: row;
+        
+        [layer="5-1"]{
+            width: 3.07rem;
+            height: 2.69rem;
+            background-image: url("https://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg")
+        }
+
+        [layer="5-3"]{
+            width: 3.07rem;
+            height: 2.69rem;
+            background-image: url("https://img.alicdn.com/imgextra/i3/27/TB21MzojFXXXXXbXpXXXXXXXXXX_!!27-2-subaru.png")
+        }
+    }
+}
+
+body > .view[name="index"] section [data-template-name="tguess"]{
+    
+    [layer="1"]{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        .px2px1(font-size,18px);
+        background-color: #eee;
+    }
+
+    [layer="2-1"]{
+        margin-top: 0.2rem;
+        height: .719rem;
+        font-weight: 500;
+        line-height: .9rem;
+    }
+    
+    [layer="2-2"]{
+        color: rgb(120, 120, 120);
+        height: 0.719rem;
+    }
+
+}
+
+body > .view[name="index"] section [data-template-name="single-item"]{
+    [layer="1"]{
+        width: 10rem;
+        display: flex;
+        flex-flow: row;
+    }
+
+    [layer="3-1"]{    
+        width: 5rem;
+        height: 4.625rem;
+        background-size: cover;
+        background-position-x: 50%;
+        background-image: url("https://img.alicdn.com/bao/uploaded/i2/810309135/TB28lP0fHBkpuFjy1zkXXbSpFXa_!!810309135.jpg_q50.jpg");
+    }
+    [layer="3-2"]{
+        margin: 0.1rem 0.2rem;
+        color: rgb(102, 102, 102);
+        height: 1rem;
+        overflow: hidden;
+    }   
+
+    [layer="3-3"]{
+        margin-left:0.2rem;
+        color: orangered;
+        font-size: .4rem;
+
+        span::before{
+            content:"\e148";
+            font-size: .2rem;
+        }
+    }
+}

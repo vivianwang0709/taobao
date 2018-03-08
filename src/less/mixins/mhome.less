@@ -1,0 +1,46 @@
+.layer-tcategroy(@img){
+    background-image: url(@img);
+}
+
+.loop-tcategroy(@n,@imgs) when (@n>0) {
+
+    >div:nth-child(@{n}){
+        >div:first-child{
+            .layer-tcategroy(extract(@imgs, @n));
+        }
+    }
+    
+    .loop-tcategroy(@n - 1, @imgs);
+
+}
+
+[data-type="backimg"]{
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.px2px1(@name, @px){
+    @{name}: @px * 1px;
+
+    [data-dpr="2"] & {
+        @{name}: (@px*2) * 1px;
+    }
+
+    [data-dpr="3"] & {
+        @{name}: (@px*3) * 1px;
+    }
+}
+
+.px2px2(@name, @px1, @px2){
+    @{name}: @px1 * 1px @px2 * 1px;
+
+    [data-dpr="2"] & {
+        @{name}: (@px1*2) * 1px (@px2*2) * 1px;
+    }
+
+    [data-dpr="3"] & {
+        @{name}: (@px1*3) * 1px (@px2*3) * 1px;
+    }
+}

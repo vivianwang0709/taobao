@@ -1,0 +1,55 @@
+body > .view[name="index"] .bottom-fixed {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+    footer{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        .px2px1(padding-top,4);
+        .px2px1(height,38);
+        border-top: 1px solid #E7E7E7;
+        border-bottom: 1px solid #F8F8F8;
+        background-color: #FFF;
+    }
+}
+
+body > .view[name="index"] footer{
+
+    a{
+        width: 100%;
+        color: #5D656B;
+        text-align: center;
+
+        span{
+            display: block;
+            &::before{
+                .px2px1(font-size,18);
+            }
+        }
+
+        p{
+            margin: 0;
+        }
+    }
+
+    a:first-child > span::before{
+        content: "\e021";
+    }
+    a:nth-child(2) > span::before{
+        content: "\e108";
+    }
+    
+    a:nth-child(3) > span::before{
+        content: "\e116";
+    }
+
+    a:nth-child(4) > span::before{
+        content: "\e008";
+    }
+    a:nth-child(5) > span::before{
+        content: "\e234";
+    }
+}
